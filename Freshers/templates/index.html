@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">YOUR CAMPUS STORY STARTS WITH A CELEBRATION</p>
+  <h1>WELCOME TO<br><em>FRESHERS PARTY.</em></h1>
+  <p class="intro">Your first unforgettable night at Bangalore University. Feel the music, join the fun and meet the friends who will make campus feel like home.</p>
+  <div class="event-info"><span>8–9 SEPT 2026</span><span>10:00 AM ONWARDS</span><span>MAIN AUDITORIUM</span></div>
+  <div class="actions"><a class="button pink" href="{{ url_for('participation') }}">I'M A PARTICIPATOR <b>→</b></a><a class="button cyan" href="{{ url_for('participate') }}">I'M A VIEWER <b>→</b></a><a class="button view" href="{{ url_for('registrations') }}">VIEW STUDENTS <b>→</b></a></div>
+</section>
+<section class="highlights"><a class="highlight dj" href="{{ url_for('event_details', slug='live-dj') }}"><span>01</span><h2>LIVE DJ</h2><p>Feel every beat, own the dance floor and celebrate your first day together.</p></a><a class="highlight games" href="{{ url_for('event_details', slug='games-fun') }}"><span>02</span><h2>GAMES & FUN</h2><p>Team up, take on exciting challenges and win memorable prizes.</p></a><a class="highlight friends" href="{{ url_for('event_details', slug='new-friends') }}"><span>03</span><h2>NEW FRIENDS</h2><p>Share a laugh, start a conversation and find your campus crew.</p></a></section>
+{% endblock %}

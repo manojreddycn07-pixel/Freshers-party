@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Join FRESHERS PARTY{% endblock %}
+{% block content %}
+<section class="page-head"><p class="eyebrow">BANGALORE UNIVERSITY</p><h1>JOIN THE<br><em>PARTY.</em></h1><p>Register your interest and step into the neon.</p></section>
+<form class="neon-form" method="post">
+  <input type="hidden" name="role" value="viewer">
+  {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}
+  <label>FULL NAME<input name="name" required placeholder="Your name"></label>
+  <label>EMAIL ADDRESS<input type="email" name="email" required placeholder="you@example.com"></label>
+  <label>COURSE / DEPARTMENT<input name="course" required placeholder="e.g. BCA, First Year"></label>
+  <label>PHONE <small>(optional)</small><input name="phone" placeholder="Your phone number"></label>
+  <button class="button pink" type="submit">SAVE MY SPOT <b>→</b></button>
+</form>
+{% endblock %}

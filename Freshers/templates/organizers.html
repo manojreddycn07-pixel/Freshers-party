@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Organizers | FRESHERS DAY{% endblock %}
+{% block content %}
+<section class="page-head"><p class="eyebrow">THE PEOPLE BEHIND THE PARTY</p><h1>MEET THE<br><em>CREW.</em></h1><p>A little chaos, a lot of passion, and one unforgettable welcome.</p></section>
+<section class="team">{% for person in team %}<article class="member"><i>{{ person.icon }}</i><h2>{{ person.name }}</h2><p>{{ person.role }}</p></article>{% endfor %}</section>
+<div class="center"><a class="button cyan" href="{{ url_for('participate') }}">JOIN THE PARTY <b>→</b></a></div>
+{% endblock %}
